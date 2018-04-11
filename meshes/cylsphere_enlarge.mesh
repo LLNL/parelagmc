@@ -1,0 +1,9 @@
+MFEM INLINE mesh v1.0
+
+type = tet
+nx = 18 
+ny = 12
+nz = 12
+sx = 8
+sy = 6
+sz = 6

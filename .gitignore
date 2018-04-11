@@ -1,0 +1,10 @@
+*.o
+*.exe
+*.a
+*.pdf
+*.out
+*.tex
+*.pyc
+*.log
+*.dat
+

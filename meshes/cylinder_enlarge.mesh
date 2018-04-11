@@ -1,0 +1,10 @@
+MFEM INLINE mesh v1.0
+# Structured mesh of box [0,3] x [0, 2] x [0, 2]
+ 
+type = tet
+nx = 6
+ny = 4
+nz = 4
+sx = 3.0
+sy = 2.0
+sz = 2.0

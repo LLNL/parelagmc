@@ -1,0 +1,57 @@
+include(CMakeFindDependencyMacro)
+
+# Get the version
+include(${CMAKE_CURRENT_LIST_DIR}/ParELAGMCConfigVersion.cmake)
+set(ParELAGMC_VERSION ${PACKAGE_VERSION})
+
+@PACKAGE_INIT@
+
+set(ParELAGMC_ENABLE_ParMoonolith @ParELAG_ENABLE_ParMoonolith@)
+
+# Compilers and flags and the like
+set(ParELAGMC_C_COMPILER @CMAKE_C_COMPILER@)
+set(ParELAGMC_CXX_COMPILER @CMAKE_CXX_COMPILER@)
+set(ParELAGMC_MPI_C_COMPILER @MPI_C_COMPILER@)
+set(ParELAGMC_MPI_CXX_COMPILER @MPI_CXX_COMPILER@)
+
+#
+# DEPENDENCIES:
+#
+set_and_check(ParELAGMC_MODULE_PATH "@PACKAGE_MODULE_INSTALL_DIR@")
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" "${ParELAGMC_MODULE_PATH}")
+
+
+if (NOT ParELAG_DIR)
+  set(ParELAG_DIR "@ParELAG_DIR@")
+endif()
+find_package(ParELAG REQUIRED NO_MODULE)
+
+if (NOT TRNG_DIR)
+  set(TRNG_DIR "@TRNG_DIR@")
+endif()
+find_package(TRNG REQUIRED)
+
+#
+# OPTIONAL DEPENDENCIES
+#
+
+if (ParELAGMC_ENABLE_ParMoonolith)
+  if (NOT ParMoonolith_DIR)
+    set(ParMoonolith_DIR "@ParMoonolith_DIR@")
+  endif()
+  find_package(ParMoonolith REQUIRED)
+endif()
+
+set(ParELAGMC_INCLUDE_DIRS "@PACKAGE_INCLUDE_INSTALL_DIRS@")
+foreach (dir ${ParELAGMC_INCLUDE_DIRS})
+  set_and_check(ParELAGMC_INCLUDE_DIRS "${dir}")
+endforeach (dir ${ParELAGMC_INCLUDE_DIRS})
+
+set_and_check(ParELAGMC_LIBRARY_DIR "@PACKAGE_LIB_INSTALL_DIR@")
+check_required_components(ParELAGMC)
+
+if (NOT TARGET parelagmc::ParELAGMC)
+  include(${CMAKE_CURRENT_LIST_DIR}/ParELAGMCTargets.cmake)
+endif (NOT TARGET parelagmc::ParELAGMC)
+
+set(ParELAGMC_LIBRARIES parelagmc::ParELAGMC)

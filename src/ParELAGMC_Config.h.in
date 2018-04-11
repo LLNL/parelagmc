@@ -1,0 +1,11 @@
+// Configuration options for ParELAGMC 
+#ifndef PARELAGMC_CONFIG_H_
+#define PARELAGMC_CONFIG_H_
+
+#define PARELAGMC_VERSION_MAJOR @ParELAGMC_VERSION_MAJOR@
+#define PARELAGMC_VERSION_MINOR @ParELAGMC_VERSION_MINOR@
+
+#cmakedefine ParELAG_ENABLE_ParMoonolith
+#cmakedefine ParELAG_BUILD_SPE10_EXAMPLES
+
+#endif

@@ -1,0 +1,30 @@
+COPYRIGHT
+
+The following copyright applies to each file in the ParELAGMC distribution, 
+unless otherwise stated in the file:
+
+Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the
+Lawrence Livermore National Laboratory. LLNL-CODE-747639. All rights reserved. 
+
+Please also see LICENSE.
+
+ParELAGMC is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License (as published by the
+Free Software Foundation) version 2, dated June 1991.
+
+ParELAGMC is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the IMPLIED WARRANTY OF
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+terms and conditions of the GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License
+along with this program (in LICENSE); if not, write to the Free Software 
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+
+CONTACT INFORMATION
+
+Please see
+
+https://github.com/LLNL/parelagmc
+
+for more information and source code availability.
