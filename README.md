@@ -1,8 +1,7 @@
 /*
-  Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at the
+  Copyright (c) 2018, Lawrence Livermore National Security, LLC. Produced at 
   Lawrence Livermore National Laboratory. LLNL-CODE-747639. All rights reserved.
-  See the file COPYRIGHT for details. Please also read the file LICENSE.      
-                                                                             
+  Please see COPYRIGHT and LICENSE for details.                                                                            
   This file is part of the ParELAGMC library. For more information and source 
   code availability see https://github.com/LLNL/parelagmc.                    
                                                                              
