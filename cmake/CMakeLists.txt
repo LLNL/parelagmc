@@ -3,7 +3,7 @@ include(CMakePackageConfigHelpers)
 
 set(MODULES_TO_INSTALL
   modules/CorrectWindowsPaths.cmake
-  modules/FindMOONOLITH.cmake
+  modules/FindParMoonolith.cmake
   modules/FindTRNG.cmake
   modules/FindPackageMultipass.cmake
   modules/ParELAGMC_CMakeUtilities.cmake
